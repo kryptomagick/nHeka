@@ -161,11 +161,15 @@ class Orias:
 
             ''' Subtract padding '''
             if x == (blocks - 1):
-                pad = block[self.blocklen - 1]
+                pos = self.blocklen - 1
+                pad = block[pos]
                 padcheck = 1
-                for z in reversed(range(pad)):
+                goal = self.blocklen - pad
+                z = pos
+                while z != goal:
                     if block[z] == pad:
                         padcheck += 1
+                    z -= 1
 
                 if padcheck == pad:
                     blocklen -= padcheck
