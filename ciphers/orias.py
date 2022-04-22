@@ -14,7 +14,7 @@ class Orias:
     alen = 4
     keylen = 26
     ivlen = 26
-    rot = 4
+    rot = 2
 
     def ksa(self, key, keylen):
         ''' Load Key '''
